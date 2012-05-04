@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.name     = 'chronologic'
   s.version  = Chronologic::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors  = ["Adam Keys", "Scott Raymond"]
-  s.email    = 'ak@gowalla.com'
+  s.authors  = ["Adam Keys", "Scott Raymond", "Mike Hagedorn"]
+  s.email    = 'mike.hagedorn@hp.com'
   s.homepage = 'http://github.com/gowalla/chronologic'
   s.summary     = "Chronologic is a database for activity feeds."
   s.description = "Chronologic uses Cassandra to fetch and store activity feeds. Quickly."
