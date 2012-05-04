@@ -1,4 +1,4 @@
-require "cassandra/0.7"
+require "cassandra"
 require "chronologic"
 
 keyspace = ENV.fetch('KEYSPACE', "ChronologicTest")

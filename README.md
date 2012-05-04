@@ -26,7 +26,26 @@ Chronologic exposes four kinds of data:
 
 ## Hello, Chronologic
 
-An example goes here.
+Chronlogic will write its objects by default to a keyspace named "ChronologicTest".  Keyspaces are analogous to
+databases in a relational type datastore.   To create this keyspace and the necessary objects within it, you can use the
+examples/bootstrap.rb script.
+
+To run both the Cassandra database and the Chronologic server you can use the foreman gem (gem install foreman if you
+dont have this installed)
+
+then type
+    foreman start
+
+ this will run your database and your Chronologic server.   Note that on startup the environment variable KEYSPACE is
+ consulted to figure out which keyspace to connect to in Cassandra.  This is defaulted to "ChronologicTest"
+
+
+ then type
+    ruby examples/bootstrap.rb
+
+ This will create the Chronologic keyspace, and the necessary Column Families (i.e. Tables in a relational store)
+
+
 
 ## Running Chronologic
 

@@ -3,6 +3,7 @@ class Chronologic::Client::Event
   include Chronologic::Event::State
 
   def initialize
+    super
     @published = false
   end
 

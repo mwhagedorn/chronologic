@@ -1,14 +1,13 @@
 # Create some objects, publish an event, publish a subevent, fetch it all
 
-require 'boilerplate'
+require './boilerplate'
 connection = Chronologic::Client::Connection.new('http://localhost:7979')
 
 connection.record("author_1", {"name" => "Adam"})
 connection.record("author_2", {"name" => "Fred Derp"})
 
-event = Chronologic::Event.new
+event = Chronologic::Client::Event.new
 event.key = "story_1"
-event.timestamp = Time.now
 event.data = {
   "headline" => "First ever post in Chronologic!",
   "lede" => "A monumental occasion for housecats everywhere.",
@@ -19,9 +18,8 @@ event.timelines = ["home"]
 
 connection.publish(event)
 
-subevent = Chronologic::Event.new
+subevent = Chronologic::Client::Event.new
 subevent.key = "comment_1"
-subevent.timestamp = Time.now
 subevent.data = {
   "message" => "LOL cats!"
 }

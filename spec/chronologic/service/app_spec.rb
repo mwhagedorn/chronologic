@@ -59,6 +59,7 @@ describe Chronologic::Service::App do
   end
 
   it "subscribes a subscriber to a timeline without backfill" do
+    #timeline, uuid, event_key
     Chronologic.schema.create_timeline_event('user_2', 'abc123', 'event_1')
 
     subscription = {
