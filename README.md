@@ -59,7 +59,7 @@ Then use the bootstrapping functions to build out the needed Cassandra back end 
 
 ```sh
 $ chronologic keyspace -k MyKeyspace
-'''
+```
 
 This will create the keyspace "MyKeyspace" in Cassandra (default is 'ChronologicTest').  Similiarly you can create the
 
@@ -67,7 +67,7 @@ needed column families (i.e. tables in relational-speak) by using the columnfami
 
 ```sh
 $ chronologic columnfamilies -c MyKeyspace
-'''
+```
 
 This will create the needed column families (i.e. Object,Event,Subscription,Timeline) in the MyKeyspace keyspace.
 
@@ -75,7 +75,7 @@ Finally you can boot the server.
 
 ```sh
 $ chronologic server
-'''
+```
 
 
 
