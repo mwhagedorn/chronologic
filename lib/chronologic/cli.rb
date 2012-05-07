@@ -61,7 +61,7 @@ module Chronologic
       end
 
     desc "columnfamilies", "creates appropriate column families in the keyspace for Cassandra.  Assumes Cassadra is running"
-    method_option :keyspace, :type => :string, :default => 'ChronologicTest', :required => true, :aliases => '-k', :banner => " Keyspace in Cassandra to create column families in"
+    method_option :columnfamilies, :type => :string, :default => 'ChronologicTest', :required => true, :aliases => '-k', :banner => " Create column families in given keyspace"
 
         def columnfamilies
           begin

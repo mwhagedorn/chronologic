@@ -45,6 +45,41 @@ $ cassandra_helper cassandra
 
 # Installing the Chronologic Server
 
+Next you need to install the cassandra server.   The fork found at https://github.com/mwhagedorn/chronologic.git includes
+some handy bootstrapping helpers.   Get the code and do a build.
+
+
+```sh
+$ git clone https://github.com/mwhagedorn/chronologic.git
+$ cd chronologic
+$ rake install
+```
+
+Then use the bootstrapping functions to build out the needed Cassandra back end data structures.
+
+```sh
+$ chronologic keyspace -k MyKeyspace
+'''
+
+This will create the keyspace "MyKeyspace" in Cassandra (default is 'ChronologicTest').  Similiarly you can create the
+
+needed column families (i.e. tables in relational-speak) by using the columnfamilies command
+
+```sh
+$ chronologic columnfamilies -c MyKeyspace
+'''
+
+This will create the needed column families (i.e. Object,Event,Subscription,Timeline) in the MyKeyspace keyspace.
+
+Finally you can boot the server.
+
+```sh
+$ chronologic server
+'''
+
+
+
+
 
 
 
