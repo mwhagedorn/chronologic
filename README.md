@@ -34,11 +34,14 @@ addresses the thrift client issue you may encounter.  The latest gem has a bad t
 $ git clone https://github.com/mwhagedorn/cassandra.git
 $ cd cassandra
 $ rake install
+```
 
 Now boot the Cassandra database
 
 ```sh
 $ cassandra_helper cassandra
+```
+
 
 # Installing the Chronologic Server
 
