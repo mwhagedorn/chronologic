@@ -24,7 +24,29 @@ Chronologic exposes four kinds of data:
   posted to your user timeline appear in the site-wide timeline, you
   would subscribe the site-wide timeline to your use timeline.
 
-## Hello, Chronologic
+
+# Getting Started
+
+First, you'll need to install and run Cassandra.  This is best done by installing from source. The version 0.12.3 found at https://github.com/mwhagedorn/cassandra.git
+addresses the thrift client issue you may encounter.  The latest gem has a bad thrift client version reference.
+
+```sh
+$ git clone https://github.com/mwhagedorn/cassandra.git
+$ cd cassandra
+$ rake install
+
+Now boot the Cassandra database
+
+```sh
+$ cassandra_helper cassandra
+
+# Installing the Chronologic Server
+
+
+
+
+
+
 
 Chronlogic will write its objects by default to a keyspace named "ChronologicTest".  Keyspaces are analogous to
 databases in a relational type datastore.   To create this keyspace and the necessary objects within it, you can use the

@@ -11,6 +11,9 @@ module Chronologic
     Chronologic::Service::Schema
   end
 
+  autoload :CLI,          'chronologic/cli'
+  autoload :SchemaHelper, "chronologic/schema_helper"
+
   module Event
     autoload :State, "chronologic/event"
     autoload :Behavior, "chronologic/event"
