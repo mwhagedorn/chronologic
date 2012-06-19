@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency('httparty')
   s.add_dependency('hashie')
   s.add_dependency('multi_json')
-  s.add_dependency('activesupport', ["~> 3.2.0"])
+  s.add_dependency('activesupport', ["~> 3.1.0"])
   s.add_dependency('i18n', ["~> 0.6.0"])
   s.add_dependency('sinatra', ["~> 1"])
   s.add_runtime_dependency "eventmachine"

@@ -1,5 +1,5 @@
 require "hashie"
-require "active_support/core_ext/module"
+require "active_support/core_ext"
 require "chronologic/cassandra_ext"
 require "multi_json"
 
